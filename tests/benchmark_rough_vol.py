@@ -7,7 +7,9 @@ from core.wavelet_qmc import rough_fbm_paths
 
 
 def test_path_statistics():
-    """Test that QMC paths have correct mean and variance."""
+    """
+    Test that QMC paths have correct mean and variance.
+    """
     config = ROUGH_VOL_CONFIG.copy()
     config["num_paths"] = 10_000  # Reduce for faster testing
 
@@ -27,7 +29,9 @@ def test_path_statistics():
 
 
 def test_convergence_rate():
-    """Test convergence rate against Cholesky (ground truth)."""
+    """
+    Test convergence rate against Cholesky (ground truth).
+    """
     config = ROUGH_VOL_CONFIG.copy()
     config["num_paths"] = 10_000
 
@@ -41,7 +45,9 @@ def test_convergence_rate():
 
 
 def test_variance_reduction():
-    """Test that QMC reduces variance compared to standard MC."""
+    """
+    Test that QMC reduces variance compared to standard MC.
+    """
     config = ROUGH_VOL_CONFIG.copy()
     config["num_paths"] = 10_000
 
@@ -59,7 +65,9 @@ def test_variance_reduction():
 
 @pytest.mark.benchmark
 def test_performance(benchmark):
-    """Benchmark performance of QMC vs Cholesky."""
+    """
+    Benchmark performance of QMC vs Cholesky.
+    """
     config = ROUGH_VOL_CONFIG.copy()
     config["num_paths"] = 1_000  # Reduce for benchmarking
 

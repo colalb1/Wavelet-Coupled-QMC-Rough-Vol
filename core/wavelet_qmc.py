@@ -5,7 +5,8 @@ from scipy.stats.qmc import Sobol
 
 @numba.njit(nogil=True, fastmath=True)
 def haar_wavelet(t, j, k, H):
-    """Compute Haar wavelet basis function at time t.
+    """
+    Compute Haar wavelet basis function at time t.
 
     Args:
         t: Time point
@@ -27,7 +28,9 @@ def haar_wavelet(t, j, k, H):
 
 @numba.njit(nogil=True, fastmath=True)
 def compute_j_from_index(i):
-    """Map index to wavelet scale j."""
+    """
+    Map index to wavelet scale j.
+    """
     j = 0
     while i >= 2**j - 1:
         i -= 2**j
@@ -37,7 +40,9 @@ def compute_j_from_index(i):
 
 @numba.njit(nogil=True, fastmath=True)
 def compute_k_from_index(i):
-    """Map index to wavelet translation k."""
+    """
+    Map index to wavelet translation k.
+    """
     j = 0
     while i >= 2**j - 1:
         i -= 2**j
@@ -47,7 +52,8 @@ def compute_k_from_index(i):
 
 @numba.njit(parallel=True)
 def reconstruct_fbm_path(sobol_coeffs, H, T, dt):
-    """Reconstruct fBM path from Sobol coefficients using Haar wavelets.
+    """
+    Reconstruct fBM path from Sobol coefficients using Haar wavelets.
 
     Args:
         sobol_coeffs: Array of Sobol sequence coefficients
@@ -72,7 +78,8 @@ def reconstruct_fbm_path(sobol_coeffs, H, T, dt):
 
 
 def generate_sobol_wavelet_coeffs(H, j_max, num_paths):
-    """Generate Sobol sequence coefficients for wavelet reconstruction.
+    """
+    Generate Sobol sequence coefficients for wavelet reconstruction.
 
     Args:
         H: Hurst parameter
@@ -88,7 +95,8 @@ def generate_sobol_wavelet_coeffs(H, j_max, num_paths):
 
 
 def rough_fbm_paths(H, T, dt, num_paths, j_max=6):
-    """Generate rough fBM paths using wavelet-coupled QMC.
+    """
+    Generate rough fBM paths using wavelet-coupled QMC.
 
     Args:
         H: Hurst parameter

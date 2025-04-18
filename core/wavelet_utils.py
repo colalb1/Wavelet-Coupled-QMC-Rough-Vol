@@ -4,7 +4,8 @@ import numpy as np
 
 @numba.njit(nogil=True, fastmath=True)
 def haar_basis(t, j, k):
-    """Compute Haar basis function at time t.
+    """
+    Compute Haar basis function at time t.
 
     Args:
         t: Time point
@@ -22,7 +23,8 @@ def haar_basis(t, j, k):
 
 
 def adaptive_j_max(H, tolerance=1e-4):
-    """Compute adaptive maximum wavelet scale based on Hurst parameter.
+    """
+    Compute adaptive maximum wavelet scale based on Hurst parameter.
 
     Args:
         H: Hurst parameter
@@ -41,7 +43,8 @@ def adaptive_j_max(H, tolerance=1e-4):
 
 
 def wavelet_heatmap(coeffs, j_max):
-    """Create a heatmap visualization of wavelet coefficients.
+    """
+    Create a heatmap visualization of wavelet coefficients.
 
     Args:
         coeffs: Array of wavelet coefficients

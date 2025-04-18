@@ -7,7 +7,8 @@ from core.wavelet_utils import wavelet_heatmap
 
 
 def plot_fbm_paths(qmc_paths, cholesky_paths, num_samples=10):
-    """Plot sample paths from QMC and Cholesky methods.
+    """
+    Plot sample paths from QMC and Cholesky methods.
 
     Args:
         qmc_paths: QMC-generated paths
@@ -37,7 +38,8 @@ def plot_fbm_paths(qmc_paths, cholesky_paths, num_samples=10):
 
 
 def plot_wavelet_heatmap(coeffs, j_max):
-    """Plot heatmap of wavelet coefficients.
+    """
+    Plot heatmap of wavelet coefficients.
 
     Args:
         coeffs: Array of wavelet coefficients
@@ -55,7 +57,9 @@ def plot_wavelet_heatmap(coeffs, j_max):
 
 
 def main():
-    """Main function for visualization testing."""
+    """
+    Main function for visualization testing.
+    """
     config = ROUGH_VOL_CONFIG.copy()
     config["num_paths"] = 1000  # Reduce for visualization
 

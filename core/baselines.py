@@ -2,7 +2,8 @@ import numpy as np
 
 
 def fbm_covariance_matrix(H, T, dt):
-    """Compute the covariance matrix for fractional Brownian motion.
+    """
+    Compute the covariance matrix for fractional Brownian motion.
 
     Args:
         H: Hurst parameter
@@ -22,7 +23,8 @@ def fbm_covariance_matrix(H, T, dt):
 
 
 def cholesky_fbm(H, T, dt, num_paths):
-    """Generate exact fBM paths using Cholesky decomposition.
+    """
+    Generate exact fBM paths using Cholesky decomposition.
 
     Args:
         H: Hurst parameter
@@ -47,7 +49,8 @@ def cholesky_fbm(H, T, dt, num_paths):
 
 
 def standard_mc_fbm(H, T, dt, num_paths):
-    """Generate fBM paths using Euler-Maruyama approximation.
+    """
+    Generate fBM paths using Euler-Maruyama approximation.
 
     Args:
         H: Hurst parameter
