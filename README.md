@@ -61,14 +61,6 @@ pytest tests/benchmark_rough_vol.py -v --benchmark-only
 python tests/visualization.py --H 0.1 --j_max 6
 ```
 
-## Dependencies
-
-- numpy>=1.22
-- numba>=0.56
-- scipy>=1.9
-- pytest-benchmark
-- matplotlib
-
 ## Performance
 
 The wavelet-QMC method offers significant advantages:
@@ -76,15 +68,3 @@ The wavelet-QMC method offers significant advantages:
 1. **Speed**: Faster than Cholesky decomposition for large path counts
 2. **Accuracy**: Better than Euler-Maruyama for rough volatility (H < 0.5)
 3. **Memory**: More memory-efficient than Cholesky for large time steps
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-MIT License 
