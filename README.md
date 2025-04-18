@@ -10,12 +10,6 @@ This project implements a wavelet-coupled Quasi-Monte Carlo (QMC) method for sim
 4. **Modular design** for easy extension and testing
 5. **Comprehensive testing** with statistical validation
 
-## Installation
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Project Structure
 
 ```
