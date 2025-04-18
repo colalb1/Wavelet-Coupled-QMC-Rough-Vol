@@ -1,0 +1,6 @@
+numpy>=1.22
+numba>=0.56
+scipy>=1.9
+pytest>=7.0
+pytest-benchmark>=3.4
+matplotlib>=3.5 
